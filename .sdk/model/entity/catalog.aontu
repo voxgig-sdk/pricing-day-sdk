@@ -1,0 +1,45 @@
+# Entity: catalog
+
+main: kit: entity: catalog: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "n_ssg"
+      req: false
+      type: "`$BOOLEAN`"
+    }
+    {
+      name: "page_prop"
+      req: false
+      type: "`$OBJECT`"
+    }
+  ]
+
+  name: "catalog"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          method: "GET"
+          orig: "/_next/data/ltZLXFvzTh1RillBuqeGx/index.json"
+          parts: [
+            "_next"
+            "data"
+            "ltZLXFvzTh1RillBuqeGx"
+            "index.json"
+          ]
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

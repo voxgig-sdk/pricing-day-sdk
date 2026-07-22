@@ -1,0 +1,104 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Pricing Day API",
+    "description": "This API provides data regarding the price changes of popular products in Russia, impacted by the ongoing conflict initiated by Putin against Ukraine. It allows users to track and visualize the growth in prices, demonstrating the economic effects of aggressive political actions.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/l0v3m0n3y/pricingday"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://pricing.day",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/_next/data/ltZLXFvzTh1RillBuqeGx/index.json": {
+      "get": {
+        "summary": "Get catalog",
+        "description": "Retrieves the catalog of popular products with their pricing information showing the impact of economic conditions on prices in Russia.",
+        "operationId": "getCatalog",
+        "tags": [
+          "Catalog"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully retrieved product catalog with pricing data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "pageProps": {
+                      "type": "object",
+                      "description": "Page properties containing catalog data"
+                    },
+                    "__N_SSG": {
+                      "type": "boolean",
+                      "description": "Next.js static site generation flag"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CatalogResponse": {
+        "type": "object",
+        "description": "Response containing product catalog with pricing information",
+        "properties": {
+          "pageProps": {
+            "type": "object",
+            "description": "Page properties containing the catalog data"
+          },
+          "__N_SSG": {
+            "type": "boolean",
+            "description": "Indicates if the page was statically generated"
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Error message describing what went wrong"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Catalog",
+      "description": "Operations related to retrieving product catalog and pricing data"
+    }
+  ],
+  "externalDocs": {
+    "description": "GitHub Repository Documentation",
+    "url": "https://github.com/l0v3m0n3y/pricingday"
+  }
+}

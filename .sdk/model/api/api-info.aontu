@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://github.com/l0v3m0n3y/pricingday"
+      }
+      description: "This API provides data regarding the price changes of popular products in Russia, impacted by the ongoing conflict initiated by Putin against Ukraine. It allows users to track and visualize the growth in prices, demonstrating the economic effects of aggressive political actions."
+      servers: [
+        {
+          description: "Production server"
+          url: "https://pricing.day"
+        }
+      ]
+      summary: "This API provides data regarding the price changes of popular products in Russia, impacted by the ongoing conflict initiated by Putin against Ukraine."
+      title: "Pricing Day API"
+      version: "1.0.0"
+      website: "https://github.com/l0v3m0n3y/pricingday"
+    }
+  }
+}
+

@@ -1,0 +1,29 @@
+{
+  "existing": {
+    "catalog": {
+      "CATALOG00": {
+        "n_ssg": true,
+        "page_prop": {},
+        "id": "CATALOG00"
+      },
+      "CATALOG01": {
+        "n_ssg": true,
+        "page_prop": {},
+        "id": "CATALOG01"
+      },
+      "CATALOG02": {
+        "n_ssg": true,
+        "page_prop": {},
+        "id": "CATALOG02"
+      }
+    }
+  },
+  "new": {
+    "catalog": {
+      "catalog_ref01": {
+        "n_ssg": true,
+        "page_prop": {}
+      }
+    }
+  }
+}
