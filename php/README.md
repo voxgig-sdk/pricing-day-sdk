@@ -35,7 +35,7 @@ $client = new PricingDaySDK();
 
 ```php
 try {
-    // load() returns the bare Catalog record (throws on error).
+    // load() returns the ENTITY — call data_get() for the Catalog record (throws on error).
     $catalog = $client->Catalog()->load();
     print_r($catalog);
 } catch (\Throwable $err) {
@@ -123,7 +123,8 @@ Create a mock client for unit testing — no server required:
 ```php
 $client = PricingDaySDK::test();
 
-// Entity ops return the bare mock record (throws on error).
+// Entity ops return the ENTITY (throws on error);
+// call data_get() for the mock record.
 $catalog = $client->Catalog()->load();
 print_r($catalog);
 ```
@@ -222,7 +223,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (an `array` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (an `array` for single-entity
 ops, a `list` for `list`) and throw on error. Wrap calls in
 `try`/`catch` to handle failures.
 
@@ -244,8 +245,6 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `n_ssg` |  |
-| `page_prop` |  |
 
 Operations: Load.
 
@@ -266,17 +265,10 @@ Create an instance: `$catalog = $client->Catalog();`
 | --- | --- |
 | `load(match)` | Load a single entity by match criteria. |
 
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `n_ssg` | `bool` |  |
-| `page_prop` | `array` |  |
-
 #### Example: Load
 
 ```php
-// load() returns the bare Catalog record (throws on error).
+// load() returns the ENTITY — call data_get() for the Catalog record (throws on error).
 $catalog = $client->Catalog()->load();
 ```
 

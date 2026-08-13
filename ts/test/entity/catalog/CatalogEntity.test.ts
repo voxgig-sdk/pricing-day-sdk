@@ -26,8 +26,8 @@ import {
 describe('CatalogEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when PRICINGDAY_TEST_LIVE=TRUE.
-  afterEach(liveDelay('PRICINGDAY_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when PRICING_DAY_TEST_LIVE=TRUE.
+  afterEach(liveDelay('PRICING_DAY_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = PricingDaySDK.test()
@@ -62,7 +62,7 @@ describe('CatalogEntity', async () => {
     // LOAD
     const catalog_ref01_ent = client.Catalog()
     const catalog_ref01_match_dt0: any = {}
-    const catalog_ref01_data_dt0 = await catalog_ref01_ent.load(catalog_ref01_match_dt0)
+    const catalog_ref01_data_dt0 = (await catalog_ref01_ent.load(catalog_ref01_match_dt0)).data()
     assert(null != catalog_ref01_data_dt0)
 
 

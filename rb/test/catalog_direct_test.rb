@@ -59,11 +59,11 @@ def catalog_direct_setup(mockres)
   calls = []
 
   env = Runner.env_override({
-    "PRICINGDAY_TEST_CATALOG_ENTID" => {},
-    "PRICINGDAY_TEST_LIVE" => "FALSE",
+    "PRICING_DAY_TEST_CATALOG_ENTID" => {},
+    "PRICING_DAY_TEST_LIVE" => "FALSE",
   })
 
-  live = env["PRICINGDAY_TEST_LIVE"] == "TRUE"
+  live = env["PRICING_DAY_TEST_LIVE"] == "TRUE"
 
   if live
     merged_opts = {

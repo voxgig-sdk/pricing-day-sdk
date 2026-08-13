@@ -34,7 +34,7 @@ client = PricingDaySDK.new
 
 ```ruby
 begin
-  # load returns the bare Catalog record (raises on error).
+  # load returns the ENTITY — call data_get for the Catalog record (raises on error).
   catalog = client.Catalog.load()
   puts catalog
 rescue => err
@@ -117,7 +117,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = PricingDaySDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 catalog = client.Catalog.load()
 puts catalog
 ```
@@ -234,8 +235,6 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `n_ssg` |  |
-| `page_prop` |  |
 
 Operations: Load.
 
@@ -256,17 +255,10 @@ Create an instance: `catalog = client.Catalog`
 | --- | --- |
 | `load(match)` | Load a single entity by match criteria. |
 
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `n_ssg` | `Boolean` |  |
-| `page_prop` | `Hash` |  |
-
 #### Example: Load
 
 ```ruby
-# load returns the bare Catalog record (raises on error).
+# load returns the ENTITY — call data_get for the Catalog record (raises on error).
 catalog = client.Catalog.load()
 ```
 

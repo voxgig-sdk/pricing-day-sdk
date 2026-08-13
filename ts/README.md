@@ -121,7 +121,8 @@ Create a mock client for unit testing — no server required:
 const client = PricingDaySDK.test()
 
 const catalog = await client.Catalog().load()
-// catalog is a bare entity populated with mock response data
+// catalog is the entity, populated with mock response data
+// — call catalog.data() for the record itself
 console.log(catalog)
 ```
 
@@ -284,8 +285,6 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `n_ssg` |  |
-| `page_prop` |  |
 
 Operations: load.
 
@@ -305,13 +304,6 @@ Create an instance: `const catalog = client.Catalog()`
 | Method | Description |
 | --- | --- |
 | `load(match)` | Load a single entity by match criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `n_ssg` | `boolean` |  |
-| `page_prop` | `Record<string, any>` |  |
 
 #### Example: Load
 

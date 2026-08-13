@@ -7,12 +7,8 @@
 -- edit by hand.
 
 ---@class Catalog
----@field n_ssg? boolean
----@field page_prop? table
 
 ---@class CatalogLoadMatch
----@field n_ssg? boolean
----@field page_prop? table
 
 local M = {}
 

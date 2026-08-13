@@ -23,6 +23,7 @@ require_once __DIR__ . '/MakeUrl.php';
 require_once __DIR__ . '/Param.php';
 require_once __DIR__ . '/PrepareAuth.php';
 require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
 require_once __DIR__ . '/PrepareHeaders.php';
 require_once __DIR__ . '/PrepareMethod.php';
 require_once __DIR__ . '/PrepareParams.php';
@@ -59,6 +60,8 @@ PricingDayUtility::setRegistrar(function (PricingDayUtility $u): void {
     $u->prepare_params = [PricingDayPrepareParams::class, 'call'];
     $u->prepare_path = [PricingDayPreparePath::class, 'call'];
     $u->prepare_query = [PricingDayPrepareQuery::class, 'call'];
+    $u->graphql_body = [PricingDayGraphql::class, 'body'];
+    $u->graphql_errors = [PricingDayGraphql::class, 'errors'];
     $u->result_basic = [PricingDayResultBasic::class, 'call'];
     $u->result_body = [PricingDayResultBody::class, 'call'];
     $u->result_headers = [PricingDayResultHeaders::class, 'call'];

@@ -225,8 +225,6 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `n_ssg` |  |
-| `page_prop` |  |
 
 Operations: Load.
 
@@ -246,13 +244,6 @@ Create an instance: `local catalog = client:Catalog(nil)`
 | Method | Description |
 | --- | --- |
 | `load(match)` | Load a single entity by match criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `n_ssg` | `boolean` |  |
-| `page_prop` | `table` |  |
 
 #### Example: Load
 

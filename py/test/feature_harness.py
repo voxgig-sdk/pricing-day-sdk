@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import PricingDayControl
-from core.error import PricingDayError
-from core.result import PricingDayResult
-from core.spec import PricingDaySpec
+from pricingday_sdk.config import make_config
+from pricingday_sdk.features import _make_feature
+from pricingday_sdk.core.control import PricingDayControl
+from pricingday_sdk.core.error import PricingDayError
+from pricingday_sdk.core.result import PricingDayResult
+from pricingday_sdk.core.spec import PricingDaySpec
 
 
 # True when this SDK was generated with the named feature.

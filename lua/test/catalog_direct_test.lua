@@ -60,11 +60,11 @@ function catalog_direct_setup(mockres)
   local calls = {}
 
   local env = runner.env_override({
-    ["PRICINGDAY_TEST_CATALOG_ENTID"] = {},
-    ["PRICINGDAY_TEST_LIVE"] = "FALSE",
+    ["PRICING_DAY_TEST_CATALOG_ENTID"] = {},
+    ["PRICING_DAY_TEST_LIVE"] = "FALSE",
   })
 
-  local live = env["PRICINGDAY_TEST_LIVE"] == "TRUE"
+  local live = env["PRICING_DAY_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {

@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = PricingDaySDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = PricingDaySDK.test({
+  entity: {
+    catalog: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const catalog = await client.Catalog().load()
-// catalog is a bare Catalog populated with mock data
+// catalog is the Catalog entity, populated with mock data
+// — call catalog.data() for the record itself
 console.log(catalog)
 ```
 
@@ -182,7 +191,7 @@ require_once 'pricingday_sdk.php';
 $client = new PricingDaySDK();
 
 
-// Load a specific catalog (returns the bare record; throws on error)
+// Load a specific catalog (returns the ENTITY; call data_get() for the record; throws on error)
 $catalog = $client->Catalog()->load();
 print_r($catalog);
 ```
@@ -210,7 +219,7 @@ require_relative "PricingDay_sdk"
 client = PricingDaySDK.new
 
 
-# Load a specific catalog (returns the bare record; raises on error)
+# Load a specific catalog (returns the ENTITY; call data_get for the record)
 catalog = client.Catalog.load()
 puts catalog
 ```
@@ -344,6 +353,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://github.com/l0v3m0n3y/pricingday](https://github.com/l0v3m0n3y/pricingday)
 

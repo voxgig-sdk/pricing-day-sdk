@@ -19,11 +19,15 @@ import {
 describe('CatalogDirect', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when PRICINGDAY_TEST_LIVE=TRUE.
-  afterEach(liveDelay('PRICINGDAY_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when PRICING_DAY_TEST_LIVE=TRUE.
+  afterEach(liveDelay('PRICING_DAY_TEST_LIVE'))
 
   test('direct-exists', async () => {
     const sdk = new PricingDaySDK({
+      // Concrete base: a live construction must satisfy any server
+      // variables a templated base URL declares; overriding base with a
+      // literal (as the direct flow tests do) sidesteps the requirement.
+      base: 'http://localhost:8080',
       system: { fetch: async () => ({}) }
     })
     assert('function' === typeof sdk.direct)
@@ -72,17 +76,17 @@ function directSetup(mockres?: any) {
   const calls: any[] = []
 
   const env = envOverride({
-    'PRICINGDAY_TEST_CATALOG_ENTID': {},
-    'PRICINGDAY_TEST_LIVE': 'FALSE',
+    'PRICING_DAY_TEST_CATALOG_ENTID': {},
+    'PRICING_DAY_TEST_LIVE': 'FALSE',
   })
 
-  const live = 'TRUE' === env.PRICINGDAY_TEST_LIVE
+  const live = 'TRUE' === env.PRICING_DAY_TEST_LIVE
 
   if (live) {
     const client = new PricingDaySDK({
     })
 
-    let idmap: any = env['PRICINGDAY_TEST_CATALOG_ENTID']
+    let idmap: any = env['PRICING_DAY_TEST_CATALOG_ENTID']
     if ('string' === typeof idmap && idmap.startsWith('{')) {
       idmap = JSON.parse(idmap)
     }

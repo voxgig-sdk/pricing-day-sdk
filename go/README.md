@@ -258,8 +258,6 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"n_ssg"` |  |
-| `"page_prop"` |  |
 
 Operations: Load.
 
@@ -279,13 +277,6 @@ Create an instance: `catalog := client.Catalog(nil)`
 | Method | Description |
 | --- | --- |
 | `Load(match, ctrl)` | Load a single entity by match criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `n_ssg` | `bool` |  |
-| `page_prop` | `map[string]any` |  |
 
 #### Example: Load
 

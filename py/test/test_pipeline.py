@@ -16,11 +16,11 @@
 import pytest
 
 from pricingday_sdk import PricingDaySDK
-from core.error import PricingDayError
-from core.result import PricingDayResult
-from core.response import PricingDayResponse
-from core.spec import PricingDaySpec
-from feature.base_feature import PricingDayBaseFeature
+from pricingday_sdk.core.error import PricingDayError
+from pricingday_sdk.core.result import PricingDayResult
+from pricingday_sdk.core.response import PricingDayResponse
+from pricingday_sdk.core.spec import PricingDaySpec
+from pricingday_sdk.feature.base_feature import PricingDayBaseFeature
 
 
 def _client():

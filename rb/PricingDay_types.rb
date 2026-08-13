@@ -9,28 +9,10 @@
 # annotations document the shapes. Do not edit by hand.
 
 # Catalog entity data model.
-#
-# @!attribute [rw] n_ssg
-#   @return [Boolean, nil]
-#
-# @!attribute [rw] page_prop
-#   @return [Hash, nil]
-Catalog = Struct.new(
-  :n_ssg,
-  :page_prop,
-  keyword_init: true
-)
+class Catalog
+end
 
 # Request payload for Catalog#load.
-#
-# @!attribute [rw] n_ssg
-#   @return [Boolean, nil]
-#
-# @!attribute [rw] page_prop
-#   @return [Hash, nil]
-CatalogLoadMatch = Struct.new(
-  :n_ssg,
-  :page_prop,
-  keyword_init: true
-)
+class CatalogLoadMatch
+end
 

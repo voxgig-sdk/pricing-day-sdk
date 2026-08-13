@@ -15,14 +15,10 @@ declare(strict_types=1);
 /** Catalog entity data model. */
 class Catalog
 {
-    public ?bool $n_ssg = null;
-    public ?array $page_prop = null;
 }
 
 /** Request payload for Catalog#load. */
 class CatalogLoadMatch
 {
-    public ?bool $n_ssg = null;
-    public ?array $page_prop = null;
 }
 

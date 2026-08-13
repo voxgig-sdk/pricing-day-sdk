@@ -23,22 +23,7 @@ func MakeConfig() map[string]any {
 		},
 		"entity": map[string]any{
 			"catalog": map[string]any{
-				"fields": []any{
-					map[string]any{
-						"active": true,
-						"name": "n_ssg",
-						"req": false,
-						"type": "`$BOOLEAN`",
-						"index$": 0,
-					},
-					map[string]any{
-						"active": true,
-						"name": "page_prop",
-						"req": false,
-						"type": "`$OBJECT`",
-						"index$": 1,
-					},
-				},
+				"fields": []any{},
 				"name": "catalog",
 				"op": map[string]any{
 					"load": map[string]any{
@@ -48,6 +33,7 @@ func MakeConfig() map[string]any {
 							map[string]any{
 								"active": true,
 								"args": map[string]any{},
+								"kind": "http",
 								"method": "GET",
 								"orig": "/_next/data/ltZLXFvzTh1RillBuqeGx/index.json",
 								"parts": []any{
@@ -59,12 +45,11 @@ func MakeConfig() map[string]any {
 								"select": map[string]any{},
 								"transform": map[string]any{
 									"req": "`reqdata`",
-									"res": "`body`",
+									"res": "`body.pageProps`",
 								},
 								"index$": 0,
 							},
 						},
-						"key$": "load",
 					},
 				},
 				"relations": map[string]any{

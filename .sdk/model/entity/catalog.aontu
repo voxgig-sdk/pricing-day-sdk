@@ -4,19 +4,6 @@ main: kit: entity: catalog: {
 
   alias: field: {}
 
-  fields: [
-    {
-      name: "n_ssg"
-      req: false
-      type: "`$BOOLEAN`"
-    }
-    {
-      name: "page_prop"
-      req: false
-      type: "`$OBJECT`"
-    }
-  ]
-
   name: "catalog"
   op: {
     load: {
@@ -33,7 +20,7 @@ main: kit: entity: catalog: {
           ]
           transform: {
             req: "`reqdata`"
-            res: "`body`"
+            res: "`body.pageProps`"
           }
         }
       ]

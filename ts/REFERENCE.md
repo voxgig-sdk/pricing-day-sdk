@@ -112,13 +112,6 @@ Alias for `PricingDaySDK.test()`.
 const catalog = client.Catalog()
 ```
 
-### Fields
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `n_ssg` | `boolean` | No |  |
-| `page_prop` | `Record<string, any>` | No |  |
-
 ### Operations
 
 #### `load(match: object, ctrl?: object)`

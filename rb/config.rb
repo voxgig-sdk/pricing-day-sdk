@@ -24,22 +24,7 @@ module PricingDayConfig
       },
       "entity" => {
         "catalog" => {
-          "fields" => [
-            {
-              "active" => true,
-              "name" => "n_ssg",
-              "req" => false,
-              "type" => "`$BOOLEAN`",
-              "index$" => 0,
-            },
-            {
-              "active" => true,
-              "name" => "page_prop",
-              "req" => false,
-              "type" => "`$OBJECT`",
-              "index$" => 1,
-            },
-          ],
+          "fields" => [],
           "name" => "catalog",
           "op" => {
             "load" => {
@@ -49,6 +34,7 @@ module PricingDayConfig
                 {
                   "active" => true,
                   "args" => {},
+                  "kind" => "http",
                   "method" => "GET",
                   "orig" => "/_next/data/ltZLXFvzTh1RillBuqeGx/index.json",
                   "parts" => [
@@ -60,7 +46,7 @@ module PricingDayConfig
                   "select" => {},
                   "transform" => {
                     "req" => "`reqdata`",
-                    "res" => "`body`",
+                    "res" => "`body.pageProps`",
                   },
                   "index$" => 0,
                 },

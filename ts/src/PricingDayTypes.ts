@@ -6,12 +6,8 @@
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 
 export interface Catalog {
-  n_ssg?: boolean
-  page_prop?: Record<string, any>
 }
 
 export interface CatalogLoadMatch {
-  n_ssg?: boolean
-  page_prop?: Record<string, any>
 }
 

@@ -23,8 +23,8 @@ module PricingDayTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("PRICINGDAY_TEST_LIVE")
-    override = getenv("PRICINGDAY_TEST_OVERRIDE")
+    live = getenv("PRICING_DAY_TEST_LIVE")
+    override = getenv("PRICING_DAY_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module PricingDayTestRunner
       end
     end
 
-    explain = getenv("PRICINGDAY_TEST_EXPLAIN")
-    m["PRICINGDAY_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("PRICING_DAY_TEST_EXPLAIN")
+    m["PRICING_DAY_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

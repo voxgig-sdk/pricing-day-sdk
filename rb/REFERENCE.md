@@ -89,13 +89,6 @@ same parameters as `direct()`. Raises on error.
 catalog = client.Catalog
 ```
 
-### Fields
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `n_ssg` | `Boolean` | No |  |
-| `page_prop` | `Hash` | No |  |
-
 ### Operations
 
 #### `load(reqmatch, ctrl = nil) -> result`
