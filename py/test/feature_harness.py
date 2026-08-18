@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from pricingday_sdk.config import make_config
+from pricingday_sdk.config import shared_config
 from pricingday_sdk.features import _make_feature
 from pricingday_sdk.core.control import PricingDayControl
 from pricingday_sdk.core.error import PricingDayError
@@ -24,7 +24,7 @@ from pricingday_sdk.core.spec import PricingDaySpec
 
 # True when this SDK was generated with the named feature.
 def has_feature(name):
-    feature = make_config().get("feature")
+    feature = shared_config().get("feature")
     return isinstance(feature, dict) and feature.get(name) is not None
 
 

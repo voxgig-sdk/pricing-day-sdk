@@ -40,7 +40,7 @@ class PricingDaySDK
         $utility = new PricingDayUtility();
         $this->_utility = $utility;
 
-        $config = PricingDayConfig::make_config();
+        $config = PricingDayConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

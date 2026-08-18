@@ -36,7 +36,7 @@ class Config {
 
 
   options = {
-    base: 'https://pricing.day',
+    base: "https://pricing.day",
 
     headers: {
       "content-type": "application/json"
@@ -61,7 +61,6 @@ class Config {
           "name": "load",
           "points": [
             {
-              "active": true,
               "args": {},
               "kind": "http",
               "method": "GET",
@@ -76,11 +75,9 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body.pageProps`"
-              },
-              "index$": 0
+              }
             }
-          ],
-          "key$": "load"
+          ]
         }
       },
       "relations": {

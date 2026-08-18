@@ -28,7 +28,7 @@ class PricingDaySDK
     utility = PricingDayUtility.new
     @_utility = utility
 
-    config = PricingDayConfig.make_config
+    config = PricingDayConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,
