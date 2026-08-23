@@ -19,6 +19,9 @@ module PricingDayConfig
     {
       "main" => {
         "name" => "PricingDay",
+        "slug" => "pricing-day",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {

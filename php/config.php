@@ -33,6 +33,9 @@ class PricingDayConfig
         return [
             "main" => [
                 "name" => "PricingDay",
+                "slug" => "pricing-day",
+                "version" => "0.0.1",
+                "target" => "php",
             ],
             "feature" => [
                 "test" => [
