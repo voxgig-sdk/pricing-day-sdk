@@ -46,16 +46,30 @@ func MakeConfig() map[string]any {
 								"kind": "http",
 								"method": "GET",
 								"orig": "/_next/data/ltZLXFvzTh1RillBuqeGx/index.json",
-								"parts": []any{
-									"_next",
-									"data",
-									"ltZLXFvzTh1RillBuqeGx",
-									"index.json",
+								"segments": []any{
+									map[string]any{
+										"lit": "_next",
+									},
+									map[string]any{
+										"lit": "data",
+									},
+									map[string]any{
+										"lit": "ltZLXFvzTh1RillBuqeGx",
+									},
+									map[string]any{
+										"lit": "index.json",
+									},
 								},
 								"select": map[string]any{},
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body.pageProps`",
+								},
+								"parts": []any{
+									"_next",
+									"data",
+									"ltZLXFvzTh1RillBuqeGx",
+									"index.json",
 								},
 							},
 						},
@@ -67,6 +81,17 @@ func MakeConfig() map[string]any {
 			},
 		},
 	}
+}
+
+// The plugin definitions the model selected per feature, as []any so a
+// feature package can consume them without core naming its types. Empty
+// when no active feature declares active plugin groups for this target.
+var featurePlugins = map[string][]any{
+}
+
+// FeaturePlugins is the definitions list for one feature's chain.
+func FeaturePlugins(name string) []any {
+	return featurePlugins[name]
 }
 
 var (

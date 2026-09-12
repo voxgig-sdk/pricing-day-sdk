@@ -42,16 +42,30 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/_next/data/ltZLXFvzTh1RillBuqeGx/index.json",
-                ["parts"] = {
-                  "_next",
-                  "data",
-                  "ltZLXFvzTh1RillBuqeGx",
-                  "index.json",
+                ["segments"] = {
+                  {
+                    ["lit"] = "_next",
+                  },
+                  {
+                    ["lit"] = "data",
+                  },
+                  {
+                    ["lit"] = "ltZLXFvzTh1RillBuqeGx",
+                  },
+                  {
+                    ["lit"] = "index.json",
+                  },
                 },
                 ["select"] = {},
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body.pageProps`",
+                },
+                ["parts"] = {
+                  "_next",
+                  "data",
+                  "ltZLXFvzTh1RillBuqeGx",
+                  "index.json",
                 },
               },
             },
