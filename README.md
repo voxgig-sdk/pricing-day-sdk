@@ -105,7 +105,7 @@ local result, err = client:Catalog():load()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/pricing-day` | publish pending — [install from git tag](https://github.com/voxgig-sdk/pricing-day-sdk/releases) |
+| TypeScript | `@voxgig-sdk/pricing-day-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/pricing-day-sdk/releases) |
 | Python | `voxgig-sdk-pricing-day` | publish pending — [install from git tag](https://github.com/voxgig-sdk/pricing-day-sdk/releases) |
 | PHP | `voxgig-sdk/pricing-day` | publish pending — [install from git tag](https://github.com/voxgig-sdk/pricing-day-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/pricing-day-sdk/go` | `go get github.com/voxgig-sdk/pricing-day-sdk/go@latest` |
@@ -119,7 +119,7 @@ local result, err = client:Catalog():load()
 ### TypeScript
 
 ```ts
-import { PricingDaySDK } from '@voxgig-sdk/pricing-day'
+import { PricingDaySDK } from '@voxgig-sdk/pricing-day-sdk'
 
 const client = new PricingDaySDK()
 

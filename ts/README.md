@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { PricingDaySDK } from '@voxgig-sdk/pricing-day'
+import { PricingDaySDK } from '@voxgig-sdk/pricing-day-sdk'
 
 const client = new PricingDaySDK()
 ```
@@ -394,7 +394,7 @@ pricing-day/
 Import the SDK from the package root:
 
 ```ts
-import { PricingDaySDK } from '@voxgig-sdk/pricing-day'
+import { PricingDaySDK } from '@voxgig-sdk/pricing-day-sdk'
 ```
 
 ### Entity state
