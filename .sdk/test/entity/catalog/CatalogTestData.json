@@ -16,5 +16,54 @@
     "catalog": {
       "catalog_ref01": {}
     }
+  },
+  "requests": {
+    "GET /_next/data/ltZLXFvzTh1RillBuqeGx/index.json": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getCatalog",
+        "parameters": [],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "__N_SSG": {
+                      "description": "Next.js static site generation flag",
+                      "type": "boolean"
+                    },
+                    "pageProps": {
+                      "description": "Page properties containing catalog data",
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successfully retrieved product catalog with pricing data"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "description": "Error message",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
+      }
+    }
   }
 }
