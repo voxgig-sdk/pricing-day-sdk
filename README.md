@@ -105,12 +105,12 @@ local result, err = client:Catalog():load()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/pricing-day-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/pricing-day-sdk/releases) |
-| Python | `voxgig-sdk-pricing-day` | publish pending — [install from git tag](https://github.com/voxgig-sdk/pricing-day-sdk/releases) |
-| PHP | `voxgig-sdk/pricing-day` | publish pending — [install from git tag](https://github.com/voxgig-sdk/pricing-day-sdk/releases) |
+| TypeScript | `@voxgig-sdk/pricing-day-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/pricing-day-sdk/tags) |
+| Python | `voxgig-sdk-pricing-day` | publish pending — [install from git tag](https://github.com/voxgig-sdk/pricing-day-sdk/tags) |
+| PHP | `voxgig-sdk/pricing-day` | publish pending — [install from git tag](https://github.com/voxgig-sdk/pricing-day-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/pricing-day-sdk/go` | `go get github.com/voxgig-sdk/pricing-day-sdk/go@latest` |
-| Ruby | `voxgig-sdk-pricing-day` | publish pending — [install from git tag](https://github.com/voxgig-sdk/pricing-day-sdk/releases) |
-| Lua | `voxgig-sdk-pricing-day` | publish pending — [install from git tag](https://github.com/voxgig-sdk/pricing-day-sdk/releases) |
+| Ruby | `voxgig-sdk-pricing-day` | publish pending — [install from git tag](https://github.com/voxgig-sdk/pricing-day-sdk/tags) |
+| Lua | `voxgig-sdk-pricing-day` | publish pending — [install from git tag](https://github.com/voxgig-sdk/pricing-day-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/pricing-day-sdk/go-cli` | `go install github.com/voxgig-sdk/pricing-day-sdk/go-cli/cmd/pricing-day@latest` |
 | Go MCP server | `github.com/voxgig-sdk/pricing-day-sdk/go-mcp` | `go get github.com/voxgig-sdk/pricing-day-sdk/go-mcp@latest` |
 
